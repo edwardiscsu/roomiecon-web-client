@@ -5,9 +5,8 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.login',
   'myApp.dashboard',
-  'myApp.view2',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view2'});
+  $routeProvider.otherwise({redirectTo: '/login'});
 }]);
