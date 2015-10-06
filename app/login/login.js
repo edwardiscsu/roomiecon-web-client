@@ -13,6 +13,11 @@ angular.module('myApp.login', ['ngRoute'])
     });
 }])
 
-.controller('LoginCtrl', [function() {
-
-}]);
+.controller('LoginCtrl',
+    function($scope) {
+        $scope.login = function() {
+            $('#login-loader').toggleClass('active');
+            setTimeout(function() { $('#login-loader').toggleClass('active'); }, 5000);
+        }
+    }
+);
