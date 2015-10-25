@@ -5,6 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.login',
   'myApp.dashboard',
+  'myApp.passwordreset',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
