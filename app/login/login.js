@@ -15,7 +15,14 @@ angular.module('myApp.login', ['ngRoute'])
 
 .controller('LoginCtrl',
     function($scope) {
+        $scope.email = "";
+        $scope.password = "";
+
         $scope.login = function() {
+            toggleLoader();
+        }
+
+        function toggleLoader() {
             $('#login-loader-line').toggleClass('active');
             setTimeout(function() { $('#login-loader-line').toggleClass('active'); }, 5000);
 
