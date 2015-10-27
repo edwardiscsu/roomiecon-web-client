@@ -16,8 +16,11 @@ angular.module('myApp.login', ['ngRoute'])
 .controller('LoginCtrl',
     function($scope) {
         $scope.login = function() {
-            $('#login-loader').toggleClass('active');
-            setTimeout(function() { $('#login-loader').toggleClass('active'); }, 5000);
+            $('#login-loader-line').toggleClass('active');
+            setTimeout(function() { $('#login-loader-line').toggleClass('active'); }, 5000);
+
+            $('#login-loader-circle').toggleClass('active');
+            setTimeout(function() { $('#login-loader-circle').toggleClass('active'); }, 5000);
         }
     }
 );

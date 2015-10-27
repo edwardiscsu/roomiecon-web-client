@@ -2,12 +2,37 @@
      ng-controller="LoginCtrl">
 
     <div class="row">
-        <form class="col s12 m6 offset-m3 l6 offset-l3">
+
+        <div class="col hide-on-small-only m12 l12">
+
+            <div class="row teal accent-3">
+                <div class="col m11 l11">
+                    <h4 class="white-text">RoomieCon</h4>
+                </div>
+                <div class="col m1 l1">
+                    <h4><i class="white-text fa fa-fw fa-registered"></i></h4>
+                </div>
+            </div>
+
+            <div id="login-loader-line" class="progress">
+                <div class="indeterminate"></div>
+            </div>
+
+        </div>
+
+        <div class="col hide-on-small-only m8 l8">
+            <div>
+                <h3>Having a hard time finding roommates?</h3>
+            </div>
+
+        </div>
+
+        <form class="col s12 m4 l4">
             <div class="row">
-                <div id="login-logo-container" class="col s12 teal-text text-accent-3">
+                <div id="login-logo-container" class="col s12 hide-on-med-and-up teal-text text-accent-3">
                     <div id="login-logo"><i class="fa fa-fw fa-registered"></i></div>
 
-                    <div id="login-loader" class="preloader-wrapper">
+                    <div id="login-loader-circle" class="preloader-wrapper">
                         <div class="spinner-layer spinner-blue">
                             <div class="circle-clipper left">
                                 <div class="circle"></div>
@@ -61,46 +86,46 @@
 
                 <div class="col s12 login-section-separator"></div>
 
-                <div class="col s12 hide-on-med-and-up">
+                <div class="col s12 m12 l12">
                     <button class="waves-effect waves-light btn-large btn-full light-blue"
                             type="submit"
                             ng-click="login()">
                         login</button>
                 </div>
-                <div class="col s12 login-section-separator hide-on-med-and-up"></div>
+                <div class="col s12 m12 l12 login-section-separator"></div>
 
-                <div class="col s12 m6 l6">
+                <div class="col s12 m12 l12">
                     <button class="waves-effect waves-light btn-large btn-full teal accent-3">
                         sign up</button>
-                </div>
-                <div class="col s12 m6 l6 hide-on-small-only">
-                    <button class="waves-effect waves-light btn-large btn-full light-blue"
-                            type="submit"
-                            ng-click="login()">
-                        login</button>
                 </div>
 
                 <div class="col s12 login-section-separator"></div>
 
-                <div class="col s3">
-                    <button class="waves-effect waves-light btn-large btn-full blue">
+                <div class="col s3 m3 l3">
+                    <button class="social-icon waves-effect waves-light btn-large btn-full blue">
                         <i class="fa fa-fw fa-twitter"></i>
                     </button>
                 </div>
-                <div class="col s3">
-                    <button class="waves-effect waves-light btn-large btn-full red lighten-1">
+                <div class="col s3 m3 l3">
+                    <button class="social-icon waves-effect waves-light btn-large btn-full red lighten-1">
                         <i class="fa fa-fw fa-google-plus"></i>
                     </button>
                 </div>
-                <div class="col s3">
-                    <button class="waves-effect waves-light btn-large btn-full blue darken-4">
+                <div class="col s3 m3 l3">
+                    <button class="social-icon waves-effect waves-light btn-large btn-full blue darken-4">
                         <i class="fa fa-fw fa-facebook"></i>
                     </button>
                 </div>
-                <div class="col s3">
-                    <button class="waves-effect waves-light btn-large btn-full brown">
+                <div class="col s3 m3 l3">
+                    <button class="social-icon waves-effect waves-light btn-large btn-full brown">
                         <i class="fa fa-fw fa-instagram"></i>
                     </button>
+                </div>
+
+                <div class="col s12 login-section-separator"></div>
+
+                <div class="col s12 m12 l12 right-align">
+                    <a href="#/passwordreset" class="">forgot your password?</a>
                 </div>
             </div>
         </form>
