@@ -1,5 +1,10 @@
 'use strict';
 
+// Server API
+var api = {
+  url: "http://localhost:3000/api"
+};
+
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',

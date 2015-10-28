@@ -14,20 +14,45 @@ angular.module('myApp.login', ['ngRoute'])
 }])
 
 .controller('LoginCtrl',
-    function($scope) {
+    function($scope, $http, $location) {
         $scope.email = "";
         $scope.password = "";
 
         $scope.login = function() {
+            var url = api.url + "/auth/login";
+            var data = JSON.stringify({
+                email: $scope.email,
+                password: $scope.password
+            });
+
             toggleLoader();
+            $http({
+                method: 'POST',
+                url: url,
+                headers: { 'Content-Type': 'application/json' },
+                data: data
+            }).then(
+                function successCallback(response) {
+                    $location.path('/dashboard');
+                    toggleLoader();
+                },
+                function errorCallback(response) {
+                    toggleLoader();
+                    alert("error connecting to server!");
+                }
+            );
+        }
+
+        $scope.signUp = function() {
+
         }
 
         function toggleLoader() {
             $('#login-loader-line').toggleClass('active');
-            setTimeout(function() { $('#login-loader-line').toggleClass('active'); }, 5000);
-
             $('#login-loader-circle').toggleClass('active');
-            setTimeout(function() { $('#login-loader-circle').toggleClass('active'); }, 5000);
+
+            //setTimeout(function() { $('#login-loader-line').toggleClass('active'); }, 3000);
+            //setTimeout(function() { $('#login-loader-circle').toggleClass('active'); }, 3000);
         }
     }
 );
