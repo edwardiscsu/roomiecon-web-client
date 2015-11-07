@@ -11,6 +11,7 @@ angular.module('myApp', [
   'myApp.login',
   'myApp.dashboard',
   'myApp.passwordreset',
+  'myApp.search',
   'myApp.signup',
   'myApp.version'
 ]).
