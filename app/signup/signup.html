@@ -1,38 +1,13 @@
-<div id="login-container" class="main-template container"
-     ng-controller="LoginCtrl">
+<div id="signup-container" class="main-template container"
+     ng-controller="SignupCtrl">
 
     <div class="row">
-
-        <div class="col hide-on-small-only m12 l12">
-
-            <div class="row teal accent-3">
-                <div class="col m11 l11">
-                    <h4 class="white-text">RoomieCon</h4>
-                </div>
-                <div class="col m1 l1">
-                    <h4><i class="white-text fa fa-fw fa-registered"></i></h4>
-                </div>
-            </div>
-
-            <div id="login-loader-line" class="progress">
-                <div class="indeterminate"></div>
-            </div>
-
-        </div>
-
-        <div class="col hide-on-small-only m8 l8">
-            <div>
-                <h3>Having a hard time finding roommates?</h3>
-            </div>
-
-        </div>
-
-        <form class="col s12 m4 l4">
+        <form class="col s12 m6 offset-m3 l6 offset-l3">
             <div class="row">
-                <div id="login-logo-container" class="col s12 hide-on-med-and-up teal-text text-accent-3">
-                    <div id="login-logo"><i class="fa fa-fw fa-registered"></i></div>
+                <div id="signup-logo-container" class="col s12 teal-text text-accent-3">
+                    <div id="signup-logo"><i class="fa fa-fw fa-registered"></i></div>
 
-                    <div id="login-loader-circle" class="preloader-wrapper">
+                    <div id="signup-loader" class="preloader-wrapper">
                         <div class="spinner-layer spinner-blue">
                             <div class="circle-clipper left">
                                 <div class="circle"></div>
@@ -76,60 +51,65 @@
                 </div>
 
                 <div class="input-field col s12">
+                    <input id="firstname" type="text"
+                           ng-modal="firstname">
+                    <label for="firstname">First Name</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="lastname" type="text"
+                           ng-modal="lastname">
+                    <label for="lastname">Last Name</label>
+                </div>
+                <div class="input-field col s12">
                     <input id="login-email" type="email" class="validate"
-                            ng-modal="email">
+                           ng-modal="email">
                     <label for="login-email">Email</label>
                 </div>
                 <div class="input-field col s12">
                     <input id="login-password" type="password" class="validate"
-                            ng-modal="password">
+                           ng-modal="password">
                     <label for="login-password">Password</label>
                 </div>
+                <div class="input-field col s12">
+                    <input id="zipcode" type="number" class="validate"
+                           ng-modal="zipcode">
+                    <label for="zipcode">Zip Code</label>
+                </div>
 
-                <div class="col s12 login-section-separator"></div>
+                <div class="col s12 signup-section-separator"></div>
 
-                <div class="col s12 m12 l12">
+
+                <div class="col s12 signup-section-separator hide-on-med-and-up"></div>
+
+
+                <div class="col s12 m12 12 hide-on-small-only">
                     <button class="waves-effect waves-light btn-large btn-full light-blue"
                             type="submit"
-                            ng-click="login()">
-                        login</button>
-                </div>
-                <div class="col s12 m12 l12 login-section-separator"></div>
-
-                <div class="col s12 m12 l12">
-                    <button class="waves-effect waves-light btn-large btn-full teal accent-3"
-                            type="submit"
                             ng-click="signup()">
-                        sign up</button>
+                        Sign-Up</button>
                 </div>
 
                 <div class="col s12 login-section-separator"></div>
 
-                <div class="col s3 m3 l3">
-                    <button class="social-icon waves-effect waves-light btn-large btn-full blue">
+                <div class="col s3">
+                    <button class="waves-effect waves-light btn-large btn-full blue">
                         <i class="fa fa-fw fa-twitter"></i>
                     </button>
                 </div>
-                <div class="col s3 m3 l3">
-                    <button class="social-icon waves-effect waves-light btn-large btn-full red lighten-1">
+                <div class="col s3">
+                    <button class="waves-effect waves-light btn-large btn-full red lighten-1">
                         <i class="fa fa-fw fa-google-plus"></i>
                     </button>
                 </div>
-                <div class="col s3 m3 l3">
-                    <button class="social-icon waves-effect waves-light btn-large btn-full blue darken-4">
+                <div class="col s3">
+                    <button class="waves-effect waves-light btn-large btn-full blue darken-4">
                         <i class="fa fa-fw fa-facebook"></i>
                     </button>
                 </div>
-                <div class="col s3 m3 l3">
-                    <button class="social-icon waves-effect waves-light btn-large btn-full brown">
+                <div class="col s3">
+                    <button class="waves-effect waves-light btn-large btn-full brown">
                         <i class="fa fa-fw fa-instagram"></i>
                     </button>
-                </div>
-
-                <div class="col s12 login-section-separator"></div>
-
-                <div class="col s12 m12 l12 right-align">
-                    <a href="#/passwordreset" class="">forgot your password?</a>
                 </div>
             </div>
         </form>

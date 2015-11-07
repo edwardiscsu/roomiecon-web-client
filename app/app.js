@@ -11,6 +11,7 @@ angular.module('myApp', [
   'myApp.login',
   'myApp.dashboard',
   'myApp.passwordreset',
+  'myApp.signup',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {

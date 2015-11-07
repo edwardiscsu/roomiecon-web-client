@@ -1,25 +1,24 @@
 /**
- * Created by Edward on 10/5/2015.
+ * Created by Muna on 10/20/2015.
  */
-
 'use strict';
 
-angular.module('myApp.login', ['ngRoute'])
+angular.module('myApp.signup', ['ngRoute'])
 
-.config(['$routeProvider', function($routeProvider) {
-   $routeProvider.when('/login', {
-        templateUrl: 'login/login.html',
-        controller: 'LoginCtrl'
-    });
-}])
+    .config(['$routeProvider', function($routeProvider) {
+        $routeProvider.when('/signup', {
+            templateUrl: 'signup/signup.html',
+            controller: 'SignupCtrl'
+        });
+    }])
 
-.controller('LoginCtrl',
+    .controller('SignupCtrl',
     function($scope, $http, $location) {
         $scope.email = "";
         $scope.password = "";
 
-        $scope.login = function() {
-            var url = api.url + "/auth/login";
+        $scope.signup = function () {
+            var url = api.url + "/auth/signup";
             var data = JSON.stringify({
                 email: $scope.email,
                 password: $scope.password
@@ -29,7 +28,7 @@ angular.module('myApp.login', ['ngRoute'])
             $http({
                 method: 'POST',
                 url: url,
-                headers: { 'Content-Type': 'application/json' },
+                headers: {'Content-Type': 'application/json'},
                 data: data
             }).then(
                 function successCallback(response) {
@@ -41,11 +40,6 @@ angular.module('myApp.login', ['ngRoute'])
                     alert("error connecting to server!");
                 }
             );
-        }
-
-        $scope.signup = function() {
-           // var url = api.url + "/signup";
-            window.location.href = 'http://localhost:63342/roomiecon-web-client/app/#/signup';
         }
 
         function toggleLoader() {
