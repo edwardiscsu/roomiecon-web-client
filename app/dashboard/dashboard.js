@@ -13,6 +13,7 @@ angular.module('myApp.dashboard', ['ngRoute'])
     });
 }])
 
-.controller('DashboardCtrl', [function() {
-
-}]);
+.controller('DashboardCtrl',
+    function($scope) {
+        $(".button-collapse").sideNav();
+});

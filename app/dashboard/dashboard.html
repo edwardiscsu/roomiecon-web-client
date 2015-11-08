@@ -1,6 +1,43 @@
-<div id="dashboard-container" class="main-template container"
+<div id="dashboard-container"
      ng-controller="DashboardCtrl">
 
-    <h1>Congrats! You've logged in!</h1>
+    <!-- navbar -->
+    <nav>
+        <div class="nav-wrapper teal accent-3">
+            <a href="#/search" class="brand-logo hide-on-med-and-down">
+                <i class="fa fa-fw fa-registered"></i>
+            </a>
+            <a href="javascript:;" data-activates="mobile-demo" class="button-collapse">
+                <i class="fa fa-fw fa-bars"></i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#/chatroom">Chatroom</a></li>
+                <li><a href="#/wishlist">Wishlist</a></li>
+                <li><a href="#/login"><i class="fa fa-fw fa-sign-out"></i></a></li>
+                <li><a href="#/profile"><i class="fa fa-fw fa-user"></i></a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="#/profile">
+                    Profile
+                </a></li>
+                <li><a href="#/chatroom">
+                    Chatroom
+                </a></li>
+                <li><a href="#/wishlist">
+                    Wishlist
+                </a></li>
+                <li><a href="#/login">
+                    Logout
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- contents goes here -->
+
+        <h1>Congrats! You've logged in!</h1>
+    </div>
+
 
 </div>
