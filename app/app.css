@@ -16,7 +16,18 @@ footer {
   padding: 0em 0.5em;
   font-size: 0.7em;
   position: absolute;
+  display:table-row;
 }
+
+/*wrapper for the footer*/
+.wrapper {
+    padding : 20px;
+    height: auto;
+}
+
+
+
+
 /* index - END */
 
 /* templates */
@@ -53,6 +64,7 @@ footer {
     height: 1.2em;
     width: 1.2em;
   }
+
 
 .login-section-separator {
   height: 2vh;
