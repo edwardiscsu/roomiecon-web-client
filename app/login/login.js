@@ -33,7 +33,9 @@ angular.module('myApp.login', ['ngRoute'])
                 data: data
             }).then(
                 function successCallback(response) {
-                    $location.path('/dashboard');
+                    localStorage.setItem('email', response.data.email);
+
+                    $location.path('/search');
                     toggleLoader();
                 },
                 function errorCallback(response) {
