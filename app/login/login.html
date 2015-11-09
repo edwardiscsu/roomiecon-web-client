@@ -1,18 +1,21 @@
-<div id="login-container" class="main-template container"
+<div id="login-container" class=""
      ng-controller="LoginCtrl">
 
-    <div class="row">
+    <!-- navbar -->
+    <nav class="hide-on-small-only">
+        <div class="nav-wrapper teal accent-3">
+            <a href="#/search" class="brand-logo hide-on-med-and-down">
+                &nbsp RoomieCon
+            </a>
+            <ul class="right hide-on-small-only">
+                <li><i class="fa fa-fw fa-registered"></i>&nbsp</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-template container row">
 
         <div class="col hide-on-small-only m12 l12">
-
-            <div class="row teal accent-3">
-                <div class="col m11 l11">
-                    <h4 class="white-text">RoomieCon</h4>
-                </div>
-                <div class="col m1 l1">
-                    <h4><i class="white-text fa fa-fw fa-registered"></i></h4>
-                </div>
-            </div>
 
             <div id="login-loader-line" class="progress">
                 <div class="indeterminate"></div>
@@ -21,9 +24,8 @@
         </div>
 
         <div class="col hide-on-small-only m8 l8">
-            <div>
-                <h3>Having a hard time finding roommates?</h3>
-            </div>
+            <h4>Looking for roomates?</h4>
+            <div><img src="assets/images/login-page.png" style="width:100%"></div>
 
         </div>
 
