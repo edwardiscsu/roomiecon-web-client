@@ -2,7 +2,9 @@
 
 // Server API
 var api = {
-  url: "http://localhost:3000/api"
+  url: window.location.href.indexOf("localhost") > -1
+      ? "https://roomiecon-api.herokuapp.com/api"
+      : "http://localhost:3000/api"
 };
 
 // Declare app level module which depends on views, and components
