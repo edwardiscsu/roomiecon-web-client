@@ -14,25 +14,31 @@ angular.module('myApp.signup', ['ngRoute'])
 
     .controller('SignupCtrl',
     function($scope, $http, $location) {
+        $scope.username = "";
         $scope.email = "";
         $scope.password = "";
+        $scope.zipcode="";
 
-        $scope.signup = function () {
+        $scope.signup = function() {
             var url = api.url + "/auth/signup";
             var data = JSON.stringify({
+                username: $scope.username,
                 email: $scope.email,
-                password: $scope.password
+                password: $scope.password,
+                zipcode: $scope.zipcode
             });
 
             toggleLoader();
             $http({
                 method: 'POST',
                 url: url,
-                headers: {'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
                 data: data
             }).then(
                 function successCallback(response) {
-                    $location.path('/dashboard');
+                    localStorage.setItem('email', response.data.email);
+
+                    $location.path('/search');
                     toggleLoader();
                 },
                 function errorCallback(response) {

@@ -1,19 +1,45 @@
-<div id="signup-container" class="main-template container"
+<div id="signup-container" class=""
      ng-controller="SignupCtrl">
 
-    <div class="row">
-        <form class="col s12 m6 offset-m3 l6 offset-l3">
-            <div class="row">
-                <div id="signup-logo-container" class="col s12 teal-text text-accent-3">
-                    <div id="signup-logo"><i class="fa fa-fw fa-registered"></i></div>
+    <!-- navbar -->
+    <nav class="hide-on-small-only">
+        <div class="nav-wrapper teal accent-3">
+            <a href="#/search" class="brand-logo hide-on-med-and-down">
+                &nbsp RoomieCon
+            </a>
+            <ul class="right hide-on-small-only">
+                <li><i class="fa fa-fw fa-registered"></i>&nbsp</li>
+            </ul>
+        </div>
+    </nav>
 
-                    <div id="signup-loader" class="preloader-wrapper">
+    <div class="main-template container row">
+
+        <div class="col hide-on-small-only m12 l12">
+
+            <div id="login-loader-line" class="progress">
+                <div class="indeterminate"></div>
+            </div>
+
+        </div>
+
+        <div class="col hide-on-small-only m8 l8">
+            <div><img src="assets/images/signup-page.png" style="width:100%"></div>
+
+        </div>
+
+        <form class="col s12 m4 l4">
+            <div class="row">
+                <div id="login-logo-container" class="col s12 hide-on-med-and-up teal-text text-accent-3">
+                    <div id="login-logo"><i class="fa fa-fw fa-registered"></i></div>
+
+                    <div id="login-loader-circle" class="preloader-wrapper">
                         <div class="spinner-layer spinner-blue">
                             <div class="circle-clipper left">
                                 <div class="circle"></div>
                             </div><div class="gap-patch">
                             <div class="circle"></div>
-                        </div><div class="circle-clipper right">
+                            <div class="circle-clipper right"></div>
                             <div class="circle"></div>
                         </div>
                         </div>
@@ -51,67 +77,72 @@
                 </div>
 
                 <div class="input-field col s12">
-                    <input id="firstname" type="text"
-                           ng-modal="firstname">
-                    <label for="firstname">First Name</label>
+                    <input id="username" type="text"
+                           ng-model="username">
+                    <label for="username">User Name</label>
                 </div>
-                <div class="input-field col s12">
-                    <input id="lastname" type="text"
-                           ng-modal="lastname">
-                    <label for="lastname">Last Name</label>
-                </div>
+
                 <div class="input-field col s12">
                     <input id="login-email" type="email" class="validate"
-                           ng-modal="email">
+                           ng-model="email">
                     <label for="login-email">Email</label>
                 </div>
                 <div class="input-field col s12">
                     <input id="login-password" type="password" class="validate"
-                           ng-modal="password">
+                           ng-model="password">
                     <label for="login-password">Password</label>
                 </div>
+
                 <div class="input-field col s12">
-                    <input id="zipcode" type="number" class="validate"
-                           ng-modal="zipcode">
+                    <input id="zipcode" type="text"
+                           ng-model="zipcode">
                     <label for="zipcode">Zip Code</label>
-                </div>
-
-                <div class="col s12 signup-section-separator"></div>
-
-
-                <div class="col s12 signup-section-separator hide-on-med-and-up"></div>
-
-
-                <div class="col s12 m12 12 hide-on-small-only">
-                    <button class="waves-effect waves-light btn-large btn-full light-blue"
-                            type="submit"
-                            ng-click="signup()">
-                        Sign-Up</button>
                 </div>
 
                 <div class="col s12 login-section-separator"></div>
 
-                <div class="col s3">
-                    <button class="waves-effect waves-light btn-large btn-full blue">
+                <div class="col s12 m12 l12">
+                    <button class="waves-effect waves-light btn-large btn-full teal accent-3"
+                            type="submit"
+                            ng-click="signup()">
+                        sign up</button>
+                </div>
+
+                <div class="col s12 login-section-separator"></div>
+
+                <div class="col s3 m3 l3">
+                    <button class="social-icon waves-effect waves-light btn-large btn-full blue">
                         <i class="fa fa-fw fa-twitter"></i>
                     </button>
                 </div>
-                <div class="col s3">
-                    <button class="waves-effect waves-light btn-large btn-full red lighten-1">
+                <div class="col s3 m3 l3">
+                    <button class="social-icon waves-effect waves-light btn-large btn-full red lighten-1">
                         <i class="fa fa-fw fa-google-plus"></i>
                     </button>
                 </div>
-                <div class="col s3">
-                    <button class="waves-effect waves-light btn-large btn-full blue darken-4">
+                <div class="col s3 m3 l3">
+                    <button class="social-icon waves-effect waves-light btn-large btn-full blue darken-4">
                         <i class="fa fa-fw fa-facebook"></i>
                     </button>
                 </div>
-                <div class="col s3">
-                    <button class="waves-effect waves-light btn-large btn-full brown">
+                <div class="col s3 m3 l3">
+                    <button class="social-icon waves-effect waves-light btn-large btn-full brown">
                         <i class="fa fa-fw fa-instagram"></i>
                     </button>
                 </div>
+
+                <div class="col s12 login-section-separator"></div>
+
+
             </div>
         </form>
     </div>
 </div>
+
+
+
+
+
+
+
+
