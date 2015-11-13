@@ -17,7 +17,7 @@ angular.module('myApp.signup', ['ngRoute'])
         $scope.username = "";
         $scope.email = "";
         $scope.password = "";
-        $scope.zipcode="";
+        $scope.zipCode="";
 
         $scope.signup = function() {
             var url = api.url + "/auth/signup";
@@ -25,7 +25,7 @@ angular.module('myApp.signup', ['ngRoute'])
                 username: $scope.username,
                 email: $scope.email,
                 password: $scope.password,
-                zipcode: $scope.zipcode
+                zipCode: $scope.zipCode
             });
 
             toggleLoader();

@@ -47,7 +47,7 @@ angular.module('myApp.login', ['ngRoute'])
 
         $scope.signup = function() {
            // var url = api.url + "/signup";
-            window.location.href = 'http://localhost:63342/roomiecon-web-client/app/#/signup';
+            $location.path('/signup');
         }
 
         function toggleLoader() {
