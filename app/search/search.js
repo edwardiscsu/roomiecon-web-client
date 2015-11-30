@@ -24,12 +24,18 @@ angular.module('myApp.search', ['ngRoute'])
             .linkDistance(150)
             .size([width, height]);
 
-        function createGraph() {
+        $scope.search = function() {
+            var url = api.url + "/search";
+            createGraph(url);
+        }
+        if($('svg').length == 0) $scope.search();
+
+        function createGraph(dataUrl) {
             var svg = d3.select("#content").append("svg")
                 .attr("width", "100%")
                 .attr("height", "100%");
 
-            d3.json("graphdata.json", function(error, graph) {
+            d3.json(dataUrl, function(error, graph) {
                 if (error) throw error;
 
                 force
@@ -65,5 +71,5 @@ angular.module('myApp.search', ['ngRoute'])
                 });
             });
         }
-        if($('svg').length == 0) createGraph();
+        //if($('svg').length == 0) createGraph("graphdata.json");
 })
