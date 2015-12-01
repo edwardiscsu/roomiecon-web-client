@@ -24,14 +24,36 @@ angular.module('myApp.search', ['ngRoute'])
             .linkDistance(150)
             .size([width, height]);
 
+        $scope.preferences = [];
+
         $scope.search = function() {
             var url = api.url + "/search";
+            var counter = 0;
+            angular.forEach($scope.preferences, function(preference, key){
+                if (preference.isActive) counter++;
+            })
+            url = url + "?code=" + counter.toString();
             createGraph(url);
         }
-        if($('svg').length == 0) $scope.search();
+        //if($('svg').length == 0) $scope.search();
+        //$scope.search();
+
+        $scope.initiate = function() {
+            var email = localStorage.getItem("email");
+            if ($scope.preferences.length == 0) {
+                if (email == "jimmy@john.com") {
+                    $scope.preferences.push({name: "Has pet", isActive: true});
+                    $scope.preferences.push({name: "Cooking", isActive: true});
+                    $scope.preferences.push({name: "Smoking", isActive: true});
+                } else $scope.preferences = [];
+            }
+            $scope.search();
+        }
+        $scope.initiate();
 
         function createGraph(dataUrl) {
-            var svg = d3.select("#content").append("svg")
+            if($('svg').length != 0) $("#tree-container").empty();
+            var svg = d3.select("#tree-container").append("svg")
                 .attr("width", "100%")
                 .attr("height", "100%");
 

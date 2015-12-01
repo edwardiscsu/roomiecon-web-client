@@ -77,6 +77,10 @@ footer {
 
 /* search */
 
+.switch-container {
+  padding:0.5em 0em 0.5em 0em;
+}
+
 .node {
   stroke: #fff;
   stroke-width: 1.5px;

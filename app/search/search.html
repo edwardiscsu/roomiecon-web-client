@@ -34,8 +34,31 @@
     </nav>
 
     <!-- contents goes here -->
-    <div id="content" class="container" style="height:100vh">
+    <div id="content" style="height:100vh">
+        <div class="row" style="height:100%">
+            <div id="tree-container" class="col s12 m8 l9" style="height:100%">
 
+            </div>
+            <div id="preferences-container" class="col m4 l3 hide-on-small-only">
+                <div class="switch-container">
+                    Saint Cloud, MN, 56301
+                </div>
+                <div class="switch-container"
+                        ng-show="preferences.length == 0">
+                    You have no features! </br> Add features from your profile page
+                </div>
+                <div class="switch-container"
+                        ng-repeat="preference in preferences">
+                    <div class="switch">
+                        <label>
+                            <input type="checkbox" ng-model="preference.isActive" ng-change="initiate()">
+                            <span class="lever"></span>
+                            {{preference.name}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
